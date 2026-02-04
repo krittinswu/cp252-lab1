@@ -151,3 +151,64 @@ Non-Functional Requirementsz
 ไม่รองรับการใช้งานในระดับองค์กรขนาดใหญ่
 
 ใช้เพื่อสาธิตแนวคิดและการทำงานของระบบบริหารจัดการที่จอดรถเท่านั้น
+```mermaid
+    flowchart LR
+
+    %% =======================
+    %% Actors
+    %% =======================
+    User[User]
+    Admin[Admin]
+
+    %% =======================
+    %% System Boundary
+    %% =======================
+    subgraph PMS["Parking Management System"]
+
+        %% User Use Cases
+        UC1((Register))
+        UC2((Login))
+        UC3((Check Parking Availability))
+        UC4((View Parking Slot Status))
+        UC5((Make Reservation))
+        UC6((Cancel Reservation))
+        UC7((Logout))
+
+        %% Admin Use Cases
+        UC8((Manage Parking Slot))
+        UC9((View Parking Records))
+
+        %% Admin Sub Use Cases
+        UC10((Add Parking Slot))
+        UC11((Update Parking Slot))
+        UC12((Delete Parking Slot))
+
+    end
+
+    %% =======================
+    %% User Interactions
+    %% =======================
+    User --> UC1
+    User --> UC2
+    User --> UC3
+    User --> UC4
+    User --> UC5
+    User --> UC6
+    User --> UC7
+
+    %% =======================
+    %% Admin Interactions
+    %% =======================
+    Admin --> UC2
+    Admin --> UC8
+    Admin --> UC9
+    Admin --> UC7
+
+    %% =======================
+    %% Include Relationships
+    %% =======================
+    UC8 --> UC10
+    UC8 --> UC11
+    UC8 --> UC12
+
+```

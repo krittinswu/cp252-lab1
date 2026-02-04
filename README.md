@@ -150,7 +150,8 @@ Non-Functional Requirementsz
 
 ไม่รองรับการใช้งานในระดับองค์กรขนาดใหญ่
 
-ใช้เพื่อสาธิตแนวคิดและการทำงานของระบบบริหารจัดการที่จอดรถเท่านั้น
+Case Diagram : Parking Management System
+---------------------------------------------
 ```mermaid
     flowchart LR
 

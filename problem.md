@@ -1,3 +1,3 @@
-This is the main branch at 50% 
+This is the main branch at 100%
 No problem
-This is the myfeature branch at 50%
+Good job 
